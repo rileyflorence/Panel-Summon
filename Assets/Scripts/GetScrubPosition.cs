@@ -10,12 +10,12 @@ public class GetScrubPosition : MonoBehaviour {
 	}
 	
 	void FixedUpdate()
-
     {
+        int layerMask = 1 << 9;
         Vector3 dwn = transform.TransformDirection(Vector3.down);
         Debug.DrawRay(transform.position, dwn * 1, Color.green);
 
-        if (Physics.Raycast(transform.position, dwn, 1))
+        if (Physics.Raycast(transform.position, dwn, 1, layerMask))
             print("We found it!");
 
     }
