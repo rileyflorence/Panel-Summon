@@ -17,7 +17,7 @@ public class GetScrubPosition : MonoBehaviour {
         Vector3 _relativeLoc;
         RaycastHit hit;
 
-        Vector3 dwn = transform.TransformDirection(Vector3.down);
+        Vector3 dwn = Vector3.down;
 
         if (Physics.Raycast(transform.position, dwn, out hit, 1, layerMask))
         {
